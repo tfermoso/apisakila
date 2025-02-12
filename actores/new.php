@@ -9,14 +9,15 @@ $stm->execute();
 $datos=$stm->fetchAll(PDO::FETCH_ASSOC);
 $json=json_encode($datos);
 // Establece la cabecera para indicar que la respuesta es JSON
-header('Content-Type: application/json');
-echo $json;
+
 }
 else{
     $response=[
         'status'=> '200',
         'message'=> 'No se han recibido los datos necesarios'
     ];
-    echo json_encode($response);
+    $json= json_encode($response);
 }
+header('Content-Type: application/json');
+echo $json;
 ?>
