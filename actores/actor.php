@@ -1,8 +1,8 @@
 <?php
-include("conexiondb.php");
-$sql="select actor_id,first_name,last_name from actor where actor_id=:actor_id";
+include("../conexiondb.php");
+$sql="select actor_id,first_name,last_name from actor where first_name=:first_name";
 $stm=$conexion->prepare($sql);
-$stm->bindParam(":actor_id",$_GET['actor_id']);
+$stm->bindParam(":first_name",$_GET['name']);
 $stm->execute();
 $datos=$stm->fetchAll(PDO::FETCH_ASSOC);
 $json=json_encode($datos);
