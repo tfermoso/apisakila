@@ -1,3 +1,4 @@
+<?php
 require 'verificar_JWT.php';
 // Extraer el token desde la cabecera Authorization
 $headers = apache_request_headers();
@@ -16,3 +17,4 @@ if($datos_usuario["user_id"] != 1) {
     echo json_encode(["error" => "Acceso denegado"]);
     exit();
 }
+?>
