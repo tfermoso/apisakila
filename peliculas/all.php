@@ -1,4 +1,5 @@
 <?php
+include_once("../validarAcceso.php");
 include("../conexiondb.php");
 $sql="select * from film";
 $result=$conexion->query($sql);

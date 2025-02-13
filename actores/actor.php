@@ -1,4 +1,5 @@
 <?php
+include_once("../validarAcceso.php");
 include("../conexiondb.php");
 $sql="select actor_id,first_name,last_name from actor where first_name=:first_name";
 $stm=$conexion->prepare($sql);
