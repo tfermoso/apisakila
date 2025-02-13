@@ -1,7 +1,5 @@
 <?php
-require 'vendor/autoload.php';
-require 'config.php';
-use Firebase\JWT\JWT;
+require 'generar_JWT.php';
 
 if(isset($_POST["user"]) && isset($_POST["password"])) {
     $user = $_POST["user"];
